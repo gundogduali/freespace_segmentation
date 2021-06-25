@@ -21,6 +21,7 @@ import tqdm
 import json
 import numpy as np
 
+
 for json_name in tqdm.tqdm(json_list):
     json_path = os.path.join(JSON_DIR,json_name)
     json_file = open(json_path,'r')
@@ -30,12 +31,17 @@ for json_name in tqdm.tqdm(json_list):
     
     mask = np.zeros((json_dict['size']['height'],json_dict['size']['width']),dtype=np.uint8)
     mask_path = os.path.join(MASK_DIR,json_name[:-9]+".png")
-    
+
     for obj in json_dict['objects']:
+
         if obj['classTitle']=='Freespace':
             mask = cv2.fillPoly(mask,np.array([obj['points']['exterior']]),color=1)
             if len(obj['points']['interior']) != 0:
-                print(json_name)
-                mask = cv2.fillPoly(mask,np.array([obj['points']['interior']]),color=0)
+                # print(json_name)
+                for i in range(len(obj['points']['interior'])):
+                    inter = np.array([obj['points']['interior'][i]])
+                    inter = np.around(inter)
+                    inter = np.array(inter,dtype=np.int32)
+                    mask = cv2.fillPoly(mask,inter,color=0)
             
     cv2.imwrite(mask_path,mask.astype(np.uint8))
