@@ -89,7 +89,6 @@ class Trainer:
         for itr,data in enumerate(tqdm(dataloader)):
             images, targets = data['image'],data['mask']
             loss,logits = self.compute_loss_and_logits(images,targets)
-            loss = loss
             
             if phase == 'train':
                 loss.backward()
