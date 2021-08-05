@@ -6,6 +6,10 @@ The goal in this project is to automatically segment the road from front camera 
 
 The goal of this project is to segment a drivable areas from a set of road images. These segmentations are used for autonomous vehicles. It provided the dataset that required much more focus on dealing with inconsistencies and differences in the limited data collection. As a result, most of our efforts went to trying out different ways to preprocess and combine different kinds of data.
 
+### Demo
+
+<img src="./figures/demo.gif" width="375"/>
+
 ### The Data
 
 The data set consists of 8555 images. The data set consists of 8555 images, 4278 of which are cfc60 data and 4277 are cfc120 data.	
