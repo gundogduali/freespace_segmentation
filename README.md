@@ -214,6 +214,14 @@ I've tried a few error functions, but the BCEDice coefficient works best.
 
 <img src="./figures/cfcu_000371.jpg" width="375"/> <img src="./figures/cfcu_002713.jpg" width="375"/> 
 
+<img src="./figures/cfc_001712.jpg" width="375"/> <img src="./figures/487292.jpg" width="375"/> 
+
+---
+
+<img src="./figures/486762.jpg" width="375"/> <img src="./figures/487855.jpg" width="375"/> 
+
+<img src="./figures/488570.jpg" width="375"/> <img src="./figures/000928.jpg" width="375"/> 
+
 ## Limitations
 
 ### The distance between two cones is too far
