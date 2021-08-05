@@ -126,6 +126,8 @@ encoded_labels = [[0,1],[1,0]]
 
 ## Augmentation
 
+To avoid overfitting, I deployed data augmentation. 
+
 <table>
     <tr>
         <th></th>
@@ -153,6 +155,27 @@ encoded_labels = [[0,1],[1,0]]
     </tr>
 </table>
 
+---
+
+<table>
+    <tr>
+        <th>Before Augmentation</th>
+        <th>After Augmentation</th>
+    </tr>
+    <tr>
+        <td><img src='./figures/before_366.png' alt='Before366'></td>
+	<td><img src='./figures/after_366.png' alt='After366'></td>
+    </tr>
+    <tr>
+        <td><img src='./figures/before_2449.png' alt='Before2449'></td>
+	<td><img src='./figures/after_2449.png' alt='After2449'></td>
+    </tr>
+    <tr>
+        <td><img src='./figures/before_3358.png' alt='Before3358'></td>
+	<td><img src='./figures/after_3358.png' alt='After3358'></td>
+    </tr>
+</table>
+
 # Cross Validation
 
 Cross-validation is a resampling procedure used to evaluate machine learning models on a limited data sample.
@@ -169,15 +192,21 @@ Cross-validation is a resampling procedure used to evaluate machine learning mod
 
 Typical U-Net architecture was used in the project, which took in 2D image arrays with two channels (background,freespace).
 
-![./figures/u-net-architecture.png](./figures/u-net-architecture.png)
+![./figures/u-net-architecture.png](./figures/u-net-architecture.png)  
 
-<img src="./figures/loss.png" width="375"/> <img src="./figures/jaccard.png" width="375"/> 
+### Model Comparison
+
+<img src="./figures/loss.png" width="375"/> <img src="./figures/iou.png" width="375"/> 
 
 ### Optimizer
 
 The Adam optimizer was used to train the parameters.
 
 ![./figures/model.png](./figures/model.png)
+
+### Error Function
+
+I've tried a few error functions, but the BCEDice coefficient works best.
 
 ## Predict Examples
 
