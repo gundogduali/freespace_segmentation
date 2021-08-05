@@ -164,15 +164,15 @@ To avoid overfitting, I deployed data augmentation.
     </tr>
     <tr>
         <td><img src='./figures/before_366.png' alt='Before366'></td>
-	<td><img src='./figures/after_366.png' alt='After366'></td>
+	<td><img src='./figures/after_366.jpg' alt='After366'></td>
     </tr>
     <tr>
         <td><img src='./figures/before_2449.png' alt='Before2449'></td>
-	<td><img src='./figures/after_2449.png' alt='After2449'></td>
+	<td><img src='./figures/after_2449.jpg' alt='After2449'></td>
     </tr>
     <tr>
         <td><img src='./figures/before_3358.png' alt='Before3358'></td>
-	<td><img src='./figures/after_3358.png' alt='After3358'></td>
+	<td><img src='./figures/after_3358.jpg' alt='After3358'></td>
     </tr>
 </table>
 
@@ -190,7 +190,7 @@ Cross-validation is a resampling procedure used to evaluate machine learning mod
 
 ### Network architecture
 
-Typical U-Net architecture was used in the project, which took in 2D image arrays with two channels (background,freespace).
+Typical U-Net architecture was used in the project, which took in 2D image arrays with two channels (background,freespace).Then the inputs went through a series of convolutional and pooling layers and were turned into feature maps with smaller size. The resulting feature maps then pass a series of up-convolutional and concatenating layers and finally, the network output a segmentation mask.
 
 ![./figures/u-net-architecture.png](./figures/u-net-architecture.png)  
 
